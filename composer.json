@@ -1,0 +1,29 @@
+{
+    "name": "freedemster/dto-transformer",
+    "description": "Transformer between Data Transfer Object and original object.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [ "dto", "api" ],
+    "authors": [
+        {
+            "name": "Dmitry Shemin",
+            "email": "freedemster@yandex.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Freedemster\\DTO\\": "./src",
+            "Freedemster\\DTO\\Tests\\": "./tests"
+        }
+    },
+    "scripts": {
+        "test": [ "./vendor/bin/phpunit --colors=always" ]
+    }
+}
