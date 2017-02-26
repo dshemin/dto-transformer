@@ -1,6 +1,8 @@
 Data Transfer Object Transformer
 ================================
 
+[![Build Status](https://travis-ci.org/freedemster/dto-transformer.svg?branch=master)](https://travis-ci.org/freedemster/dto-transformer)
+
 A data transfer object (DTO) is an object that carries data between processes.
 [more about ...](https://en.wikipedia.org/wiki/Data_transfer_object)
 
