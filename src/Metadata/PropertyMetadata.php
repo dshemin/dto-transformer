@@ -47,15 +47,6 @@ class PropertyMetadata implements PropertyMetadataInterface
     const ACCESS_WRITE = 2;
 
     /**
-     * Array of available access levels.
-     */
-    const AVAILABLE_ACCESSES = [
-        self::ACCESS_RW,
-        self::ACCESS_READ,
-        self::ACCESS_WRITE,
-    ];
-
-    /**
      * Class metadata.
      *
      * @var ClassMetadataInterface
@@ -181,7 +172,13 @@ class PropertyMetadata implements PropertyMetadataInterface
      */
     public function setAccessType($accessType)
     {
-        if (! in_array($accessType, self::AVAILABLE_ACCESSES, true)) {
+        $available = [
+            self::ACCESS_RW,
+            self::ACCESS_READ,
+            self::ACCESS_WRITE,
+        ];
+
+        if (! in_array($accessType, $available, true)) {
             throw DTOPropertyMetadataException::invalidAccessType();
         }
 
